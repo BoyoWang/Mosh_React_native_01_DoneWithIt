@@ -3,16 +3,9 @@ import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
 export default function App() {
-  const handlePress = () => {
-    console.log("Text pressed");
-  };
-
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Hello World! This is a very very very very very very very very very very
-        long text.
-      </Text>
+      <Text>Hello World!</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -21,8 +14,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
-    // alignItems: "center",
-    // justifyContent: "center",
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
