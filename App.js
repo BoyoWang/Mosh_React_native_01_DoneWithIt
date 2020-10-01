@@ -5,7 +5,10 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World!</Text>
+      <Text numberOfLines={1}>
+        Hello World! This is a very very very very very very very very very very
+        long text.
+      </Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
