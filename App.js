@@ -1,6 +1,7 @@
 import React from "react";
 import {
   //
+  Dimensions,
   StyleSheet,
   SafeAreaView,
   Platform,
@@ -9,6 +10,7 @@ import {
 } from "react-native";
 
 export default function App() {
+  console.log(Platform.OS, Dimensions.get("window"));
   return (
     <SafeAreaView style={styles.container}>
       <View
