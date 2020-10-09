@@ -7,7 +7,8 @@ export default function App() {
       style={{
         backgroundColor: "#fff",
         flex: 1,
-        flexDirection: "column-reverse",
+        flexDirection: "row",
+        justifyContent: "center",
       }}
     >
       <View
@@ -15,6 +16,7 @@ export default function App() {
           backgroundColor: "dodgerblue",
           width: 100,
           height: 100,
+          alignSelf: "flex-end",
         }}
       />
       <View
