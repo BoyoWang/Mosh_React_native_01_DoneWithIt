@@ -10,13 +10,15 @@ export default function App() {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        alignContent: "center",
+        flexWrap: "wrap",
       }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
           width: 100,
-          height: 100,
+          height: 200,
         }}
       />
       <View
