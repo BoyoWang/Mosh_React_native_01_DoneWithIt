@@ -6,13 +6,27 @@ function WelcomeScreen(props) {
     <ImageBackground
       style={styles.background}
       source={require("../assets/background.jpg")}
-    ></ImageBackground>
+    >
+      <View style={styles.loginButton}></View>
+      <View style={styles.registerButton}></View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    justifyContent: "flex-end",
+  },
+  loginButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "#fc5c65",
+  },
+  registerButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "#4ecdc4",
   },
 });
 
