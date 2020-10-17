@@ -14,12 +14,9 @@ export default function App() {
     >
       <View
         style={{
-          height: 100,
-          width: 100,
           backgroundColor: "dodgerblue",
-          borderColor: "royalblue",
-          borderWidth: 10,
-          borderRadius: 50,
+          width: 100,
+          height: 100,
         }}
       />
     </View>
