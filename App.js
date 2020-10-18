@@ -12,21 +12,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text
-        style={{
-          fontFamily: "Courier",
-          fontSize: 30,
-          fontStyle: "italic",
-          fontWeight: "600",
-          color: "tomato",
-          textTransform: "capitalize",
-          textDecorationLine: "underline",
-          textAlign: "center",
-          lineHeight: 30,
-        }}
-      >
-        I love react native, this is my first React Native App!
-      </Text>
+      <Text>I love react native, this is my first React Native App!</Text>
     </View>
   );
 }
