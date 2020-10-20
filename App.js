@@ -15,11 +15,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <MaterialCommunityIcons //
-        name="email"
-        size={200}
-        color="dodgerblue"
-      />
+      <AppText>I loce react native</AppText>
     </View>
   );
 }
