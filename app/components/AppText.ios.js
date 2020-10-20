@@ -7,8 +7,9 @@ function AppText(props) {
 
 const styles = StyleSheet.create({
   text: {
-    color: "red",
-    fontSize: 30,
+    color: "tomato",
+    fontSize: 18,
+    fontFamily: "Avenir",
   },
 });
 
