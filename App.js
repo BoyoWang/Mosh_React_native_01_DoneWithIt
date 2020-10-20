@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import WelcomeScreen from "./app/screen/WelcomeScreen";
 import ViewImageScreen from "./app/screen/ViewImageScreen";
-import AppText from "./app/components/AppText/AppText";
+import AppText from "./app/components/AppText/";
 
 export default function App() {
   return (
