@@ -15,7 +15,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <AppText>I loce react native</AppText>
+      <AppText>I love react native</AppText>
     </View>
   );
 }
