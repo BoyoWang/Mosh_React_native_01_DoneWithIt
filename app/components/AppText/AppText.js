@@ -7,9 +7,8 @@ function AppText(props) {
 
 const styles = StyleSheet.create({
   text: {
-    color: "tomato",
-    fontSize: 20,
-    fontFamily: "Roboto",
+    fontSize: 18,
+    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
   },
 });
 
