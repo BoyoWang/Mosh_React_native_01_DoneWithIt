@@ -9,6 +9,7 @@ import {
 import Constants from "expo-constants";
 
 import ListItem from "../components/ListItem";
+import ListItemSeparator from "../components/ListItemSeparator";
 
 const messages = [
   {
@@ -38,6 +39,7 @@ function MessagesScreen(props) {
             image={item.image}
           />
         )}
+        ItemSeparatorComponent={ListItemSeparator}
       />
     </SafeAreaView>
   );
