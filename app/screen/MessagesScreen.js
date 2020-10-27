@@ -5,11 +5,13 @@ import {
   StyleSheet,
   Platform,
   StatusBar,
+  View,
 } from "react-native";
 import Constants from "expo-constants";
 
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
 
 const messages = [
   {
@@ -38,6 +40,7 @@ function MessagesScreen(props) {
             subTitle={item.description}
             image={item.image}
             onPress={() => console.log("Message selected", item)}
+            renderRightActions={ListItemDeleteAction}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
