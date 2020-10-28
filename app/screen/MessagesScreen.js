@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import {
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  Platform,
-  StatusBar,
-  View,
-} from "react-native";
-import Constants from "expo-constants";
+import { FlatList } from "react-native";
 
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import Screen from "../components/Screen";
 
 const initialMessages = [
   {
@@ -36,7 +29,7 @@ function MessagesScreen(props) {
     setMessages(newMessages);
   };
   return (
-    <SafeAreaView style={styles.screen}>
+    <Screen>
       <FlatList //
         data={messages}
         keyExtractor={(message) => message.id.toString()}
@@ -57,14 +50,8 @@ function MessagesScreen(props) {
         )}
         ItemSeparatorComponent={ListItemSeparator}
       />
-    </SafeAreaView>
+    </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    paddingTop: Constants.statusBarHeight,
-  },
-});
 
 export default MessagesScreen;
