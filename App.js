@@ -9,7 +9,7 @@ export default function App() {
     <Screen>
       <ListItem
         title="My Title"
-        subTitle="My subtitle"
+        // subTitle="My subtitle"
         ImageComponent={<Icon name="email" />}
       />
     </Screen>
