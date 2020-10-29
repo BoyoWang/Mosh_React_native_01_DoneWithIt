@@ -1,7 +1,5 @@
 import React from "react";
 
-import ViewImageScreen from "./app/screen/ViewImageScreen";
-import MessagesScreen from "./app/screen/MessagesScreen";
 import Screen from "./app/components/Screen";
 import Icon from "./app/components/Icon";
 
