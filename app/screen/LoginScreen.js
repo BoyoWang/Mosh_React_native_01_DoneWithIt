@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Image, StyleSheet } from "react-native";
-import AppTextInput from "../components/AppTextInput";
 
+import AppTextInput from "../components/AppTextInput";
 import Screen from "../components/Screen";
 import AppButton from "../components/AppButton";
 
