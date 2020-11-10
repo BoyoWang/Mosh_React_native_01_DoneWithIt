@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
-import AppFormFields from "../components/forms/AppFormFields";
+import AppFormField from "../components/forms/AppFormField";
 import AppForm from "../components/forms/AppForm";
 import SubmitButton from "../components/forms/SubmitButton";
 
@@ -22,7 +22,7 @@ function LoginScreen(props) {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        <AppFormFields
+        <AppFormField
           autoCapitalize="none"
           autoCorrect={false}
           icon="email"
@@ -31,7 +31,7 @@ function LoginScreen(props) {
           textContentType="emailAddress"
           placeholder="Email"
         />
-        <AppFormFields
+        <AppFormField
           autoCapitalize="none"
           autoCorrect={false}
           icon="lock"
