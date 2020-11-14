@@ -9,8 +9,10 @@ import Screen from "../components/Screen";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "He as compliment unreserved projecting. Between had observe pretend delight for believe. Do newspaper questions consulted sweetness do.",
+    description:
+      "He as compliment unreserved projecting. Between had observe pretend delight for believe. Do newspaper questions consulted sweetness do.",
     image: require("../assets/mosh.jpg"),
   },
   {
