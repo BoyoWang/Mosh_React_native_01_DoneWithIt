@@ -12,7 +12,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { defaultStyles } from "../config/styles";
 import AppText from "./AppText";
 import Screen from "./Screen";
-import PicckerItem from "./PicckerItem";
+import PickerItem from "./PickerItem";
 
 function AppPicker({
   icon,
@@ -55,7 +55,7 @@ function AppPicker({
             data={items}
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => (
-              <PicckerItem
+              <PickerItem
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
