@@ -4,9 +4,9 @@ import * as Yup from "yup";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 
 import {
-  AppForm,
-  AppFormField,
-  AppFormPicker,
+  Form,
+  FormField,
+  FormPicker,
   SubmitButton,
 } from "../components/forms/index";
 import Screen from "../components/Screen";
@@ -78,7 +78,7 @@ const categories = [
 function ListingEditScreen() {
   return (
     <Screen style={styles.container}>
-      <AppForm
+      <Form
         initialValues={{
           title: "",
           price: "",
@@ -88,15 +88,15 @@ function ListingEditScreen() {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        <AppFormField maxLength={255} name="title" placeholder="Title" />
-        <AppFormField
+        <FormField maxLength={255} name="title" placeholder="Title" />
+        <FormField
           keyboardType="numeric"
           maxLength={8}
           name="price"
           placeholder="Price"
           width={120}
         />
-        <AppFormPicker
+        <FormPicker
           items={categories}
           name="category"
           numberOfColumns={3}
@@ -104,7 +104,7 @@ function ListingEditScreen() {
           placeholder="Category"
           width="50%"
         />
-        <AppFormField
+        <FormField
           maxLength={255}
           multiline
           name="description"
@@ -112,7 +112,7 @@ function ListingEditScreen() {
           placeholder="Description"
         />
         <SubmitButton title="Post" />
-      </AppForm>
+      </Form>
     </Screen>
   );
 }
