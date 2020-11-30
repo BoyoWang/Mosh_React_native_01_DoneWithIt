@@ -1,10 +1,20 @@
 import { View, StyleSheet, Image } from "react-native";
-import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import * as ImagePicker from "expo-image-picker";
+import React, { useEffect } from "react";
 
 import colors from "../config/colors";
 
 function ImageInput({ imageUri }) {
+  useEffect(() => {
+    requestPermission();
+  }, []);
+
+  const requestPermission = async () => {
+    const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+    if (!granted) alert("You need to enable permission to access the library.");
+  };
+
   return (
     <View style={styles.container}>
       {!imageUri && (
