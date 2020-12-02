@@ -1,6 +1,8 @@
-import React from "react";
 import { StyleSheet } from "react-native";
+import * as Location from "expo-location";
 import * as Yup from "yup";
+import React, { useEffect, useState } from "react";
+
 import CategoryPickerItem from "../components/CategoryPickerItem";
 
 import {
@@ -78,6 +80,27 @@ const categories = [
 ];
 
 function ListingEditScreen() {
+  const [location, setLocation] = useState();
+
+  const getLocation = async () => {
+    try {
+      const { granted } = await Location.requestPermissionsAsync();
+      if (!granted) return;
+
+      const {
+        coords: { latitude, longitude },
+      } = await Location.getCurrentPositionAsync();
+
+      setLocation({ latitude, longitude });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getLocation();
+  }, []);
+
   return (
     <Screen style={styles.container}>
       <Form
@@ -88,7 +111,7 @@ function ListingEditScreen() {
           category: null,
           images: [],
         }}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={() => console.log(location)}
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
