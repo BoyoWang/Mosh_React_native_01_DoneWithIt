@@ -1,7 +1,8 @@
+import { Text } from "react-native";
 import React from "react";
 
-import ListingEditScreen from "./app/screen/ListingEditScreen";
+import Screen from "./app/components/Screen";
 
 export default function App() {
-  return <ListingEditScreen />;
+  return <Screen />;
 }
