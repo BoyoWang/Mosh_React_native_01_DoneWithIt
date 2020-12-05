@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 
-import ListingEditScreen from "../screen/ListingEditScreen";
-import FeedNavigator from "./FeedNavigator";
 import AccountNavigator from "./AccountNavigator";
+import FeedNavigator from "./FeedNavigator";
+import ListingEditScreen from "../screen/ListingEditScreen";
 
 const Tab = createBottomTabNavigator();
 
