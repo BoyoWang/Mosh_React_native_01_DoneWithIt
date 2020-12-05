@@ -3,6 +3,7 @@ import React from "react";
 
 import LoginScreen from "../screen/LoginScreen";
 import RegisterScreen from "../screen/RegisterScreen";
+import routes from "./routes";
 import WelcomeScreen from "../screen/WelcomeScreen";
 
 const Stack = createStackNavigator();
@@ -10,12 +11,12 @@ const Stack = createStackNavigator();
 const AuthNavigator = () => (
   <Stack.Navigator>
     <Stack.Screen
-      name="Welcome"
+      name={routes.WELCOME}
       component={WelcomeScreen}
       options={{ headerShown: false }}
     />
-    <Stack.Screen name="Login" component={LoginScreen} />
-    <Stack.Screen name="Register" component={RegisterScreen} />
+    <Stack.Screen name={routes.LOGIN} component={LoginScreen} />
+    <Stack.Screen name={routes.REGISTER} component={RegisterScreen} />
   </Stack.Navigator>
 );
 
