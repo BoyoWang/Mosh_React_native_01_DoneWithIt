@@ -1,4 +1,4 @@
-import { ActivityIndicator, FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import React, { useEffect, useState } from "react";
 
 import Card from "../components/Card";
@@ -8,6 +8,7 @@ import routes from "../navigation/routes";
 import Screen from "../components/Screen";
 import AppText from "../components/Text";
 import Button from "../components/Button";
+import ActivityIndicator from "../components/ActivityIndicator";
 
 function ListingsScreen({ navigation }) {
   const [listings, setListings] = useState([]);
@@ -37,6 +38,7 @@ function ListingsScreen({ navigation }) {
           <Button title="Retry" onPress={loadListings} />
         </>
       )}
+      <ActivityIndicator visible={true} />
       {/* <FlatList
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
