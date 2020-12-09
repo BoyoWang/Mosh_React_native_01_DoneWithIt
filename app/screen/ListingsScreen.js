@@ -38,8 +38,8 @@ function ListingsScreen({ navigation }) {
           <Button title="Retry" onPress={loadListings} />
         </>
       )}
-      <ActivityIndicator visible={true} />
-      {/* <FlatList
+      <ActivityIndicator visible={loading} />
+      <FlatList
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
         renderItem={({ item }) => (
@@ -50,7 +50,7 @@ function ListingsScreen({ navigation }) {
             onPress={() => navigation.navigate(routes.LINSTING_DETAILS, item)}
           />
         )}
-      /> */}
+      />
     </Screen>
   );
 }
