@@ -1,5 +1,6 @@
-import React from "react";
 import { View, StyleSheet, Modal } from "react-native";
+import React from "react";
+
 import Text from "../components/Text";
 
 function UploadScreen({ progress = 0, visible = false }) {
