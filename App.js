@@ -1,14 +1,9 @@
 import React from "react";
-import NetInfo from "@react-native-community/netinfo";
+import NetInfo, { useNetInfo } from "@react-native-community/netinfo";
+import { View } from "react-native";
 
 export default function App() {
-  // componentDidMount
-  const unsubscribe = NetInfo.addEventListener((netInfo) =>
-    console.log(netInfo)
-  );
+  const netInfo = useNetInfo();
 
-  // componentWillMount
-  unsubscribe();
-
-  return null;
+  return netInfo.isInternetReachable ? <View></View> : <View></View>;
 }
