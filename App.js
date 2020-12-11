@@ -1,9 +1,9 @@
 import React from "react";
 import NetInfo, { useNetInfo } from "@react-native-community/netinfo";
-import { View } from "react-native";
+import { Button, View } from "react-native";
 
 export default function App() {
   const netInfo = useNetInfo();
 
-  return netInfo.isInternetReachable ? <View></View> : <View></View>;
+  return <Button disabled={!netInfo.isInternetReachable} title="Btn" />;
 }
