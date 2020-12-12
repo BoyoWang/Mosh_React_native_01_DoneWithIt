@@ -1,11 +1,15 @@
 import Constants from "expo-constants";
 import { View, StyleSheet } from "react-native";
 import React from "react";
+import { useNetInfo } from "@react-native-community/netinfo";
 
 import colors from "../config/colors";
 import Text from "./Text";
 
 function OfflineNotice(props) {
+  const netInfo = useNetInfo();
+  console.log(netInfo);
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>No Internet Connection.</Text>
