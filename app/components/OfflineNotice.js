@@ -8,13 +8,15 @@ import Text from "./Text";
 
 function OfflineNotice(props) {
   const netInfo = useNetInfo();
-  console.log(netInfo);
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>No Internet Connection.</Text>
-    </View>
-  );
+  if (netInfo.type !== "unknown" && netInfo.isInternetReachable === false)
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>No Internet Connection.</Text>
+      </View>
+    );
+
+  return null;
 }
 
 const styles = StyleSheet.create({
