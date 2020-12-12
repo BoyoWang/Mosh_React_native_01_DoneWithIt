@@ -1,13 +1,13 @@
-import cache from "./app/utility/cache";
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+
+import AppNavigator from "./app/navigation/AppNavigator";
+import navigationTheme from "./app/navigation/navigationTheme";
 
 export default function App() {
-  const demo = async () => {
-    await cache.store("person", { id: 1 });
-    const person = await cache.get("person");
-    console.log(person);
-  };
-
-  demo();
-
-  return null;
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }
