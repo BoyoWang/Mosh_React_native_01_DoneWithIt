@@ -10,6 +10,7 @@ import {
   SubmitButton,
 } from "../components/forms/index";
 import authApi from "../api/auth";
+import authStorage from "../auth/storage";
 import AuthContext from "../auth/context";
 import Screen from "../components/Screen";
 
@@ -28,6 +29,7 @@ function LoginScreen(props) {
     setLoginFailed(false);
     const user = jwtDecode(result.data);
     authContext.setUser(user);
+    authStorage.storeToken(result.data);
   };
 
   return (

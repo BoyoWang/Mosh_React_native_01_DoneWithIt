@@ -7,6 +7,7 @@ import Icon from "../components/Icon";
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
 import Screen from "../components/Screen";
+import authStorage from "../auth/storage";
 
 const menuItems = [
   {
@@ -29,6 +30,11 @@ const menuItems = [
 
 function AccountScreen({ navigation }) {
   const { user, setUser } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    setUser(null);
+    authStorage.removeToken();
+  };
 
   return (
     <Screen style={styles.screen}>
@@ -63,7 +69,7 @@ function AccountScreen({ navigation }) {
       <ListItem
         title="Log Out"
         ImageComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
-        onPress={() => setUser(null)}
+        onPress={handleLogout}
       />
     </Screen>
   );
