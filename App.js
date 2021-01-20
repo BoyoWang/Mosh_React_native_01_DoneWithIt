@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import jwtDecode from "jwt-decode";
 import React, { useEffect, useState } from "react";
+import { AppLoading } from "expo";
 
 import AppNavigator from "./app/navigation/AppNavigator";
 import AuthContext from "./app/auth/context";
@@ -11,6 +12,7 @@ import OfflineNotice from "./app/components/OfflineNotice";
 
 export default function App() {
   const [user, setUser] = useState();
+  const [isReady, setIsReady] = useState(false);
 
   const restoreToken = async () => {
     const token = await authStorage.getToken();
@@ -18,9 +20,10 @@ export default function App() {
     setUser(jwtDecode(token));
   };
 
-  useEffect(() => {
-    restoreToken();
-  }, []);
+  if (!isReady)
+    return (
+      <AppLoading startAsync={restoreToken} onFinish={() => setIsReady(true)} />
+    );
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
