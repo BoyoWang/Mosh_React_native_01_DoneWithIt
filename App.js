@@ -1,13 +1,13 @@
 import { NavigationContainer } from "@react-navigation/native";
-import React, { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
+import React, { useEffect, useState } from "react";
 
 import AppNavigator from "./app/navigation/AppNavigator";
 import AuthContext from "./app/auth/context";
 import AuthNavigator from "./app/navigation/AuthNavigator";
+import authStorage from "./app/auth/storage";
 import navigationTheme from "./app/navigation/navigationTheme";
 import OfflineNotice from "./app/components/OfflineNotice";
-import authStorage from "./app/auth/storage";
 
 export default function App() {
   const [user, setUser] = useState();
