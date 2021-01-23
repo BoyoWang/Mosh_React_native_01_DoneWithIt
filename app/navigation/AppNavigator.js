@@ -16,6 +16,10 @@ const Tab = createBottomTabNavigator();
 export default AppNavigator = () => {
   useEffect(() => {
     registerForPushNotifications();
+
+    Notifications.addNotificationResponseReceivedListener((notification) =>
+      console.log(notification)
+    );
   }, []);
 
   const registerForPushNotifications = async () => {
