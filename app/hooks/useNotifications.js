@@ -5,13 +5,14 @@ import { useEffect } from "react";
 import expoPushTokensApi from "../api/expoPushTokens";
 import navigation from "../navigation/rootNavigation";
 
-export default useNotifications = () => {
+export default useNotifications = (notificationListener) => {
   useEffect(() => {
     registerForPushNotifications();
 
-    Notifications.addNotificationResponseReceivedListener((notification) => {
-      navigation.navigate("Account");
-    });
+    if (notificationListener)
+      Notifications.addNotificationResponseReceivedListener(
+        notificationListener
+      );
   }, []);
 
   const registerForPushNotifications = async () => {
