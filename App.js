@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React, { useState } from "react";
 import { AppLoading } from "expo";
+import * as Notifications from "expo-notifications";
 
 import AppNavigator from "./app/navigation/AppNavigator";
 import AuthContext from "./app/auth/context";
@@ -9,6 +10,14 @@ import authStorage from "./app/auth/storage";
 import navigationTheme from "./app/navigation/navigationTheme";
 import OfflineNotice from "./app/components/OfflineNotice";
 import { navigationRef } from "./app/navigation/rootNavigation";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false,
+  }),
+});
 
 export default function App() {
   const [user, setUser] = useState();
